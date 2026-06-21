@@ -863,7 +863,19 @@ namespace wtKST.Properties {
                 this["QRV_Local_Table_FileName"] = value;
             }
         }
-        
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool QRV_ParseNameInfo {
+            get {
+                return ((bool)(this["QRV_ParseNameInfo"]));
+            }
+            set {
+                this["QRV_ParseNameInfo"] = value;
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("STN1")]

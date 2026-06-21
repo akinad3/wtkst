@@ -51,7 +51,7 @@ namespace wtKST
             bool call_in_stationDB = false;
 
             // try to deduce information about the bands the user is using from the "NAME" field (which is abused like this often)
-            bool call_in_nameInfo = EstimateBandsSupported(nameInfo, ref row);
+            bool call_in_nameInfo = Settings.Default.QRV_ParseNameInfo && EstimateBandsSupported(nameInfo, ref row);
 
             if (!call_in_nameInfo)
             {

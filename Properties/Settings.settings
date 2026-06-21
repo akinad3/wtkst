@@ -212,6 +212,9 @@
     <Setting Name="QRV_Local_Table_FileName" Type="System.String" Scope="User">
       <Value Profile="(Default)">qrv_local.xml</Value>
     </Setting>
+    <Setting Name="QRV_ParseNameInfo" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
     <Setting Name="WinTest_StationName" Type="System.String" Scope="User">
       <Value Profile="(Default)">STN1</Value>
     </Setting>

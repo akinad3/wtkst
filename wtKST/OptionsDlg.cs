@@ -26,6 +26,7 @@ namespace wtKST
         public CheckBox cb_KST_ShowBalloon;
 
         public CheckBox cb_ShowBeacons;
+        private CheckBox cb_QRV_ParseNameInfo;
         private Label label3;
         public TextBox tb_KST_UserName;
         private Label label4;
@@ -314,6 +315,7 @@ namespace wtKST
             this.tb_KST_MaxDist = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.cb_ShowBeacons = new System.Windows.Forms.CheckBox();
+            this.cb_QRV_ParseNameInfo = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.cb_KST_ShowBalloon = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -512,10 +514,11 @@ namespace wtKST
             this.groupBox3.Controls.Add(this.tb_KST_MaxDist);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.cb_ShowBeacons);
+            this.groupBox3.Controls.Add(this.cb_QRV_ParseNameInfo);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(9, 19);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(445, 62);
+            this.groupBox3.Size = new System.Drawing.Size(445, 82);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Calls";
@@ -550,12 +553,24 @@ namespace wtKST
             this.cb_ShowBeacons.TabIndex = 5;
             this.cb_ShowBeacons.Text = "Show Beacons";
             this.cb_ShowBeacons.UseVisualStyleBackColor = true;
-            // 
+            //
+            // cb_QRV_ParseNameInfo
+            //
+            this.cb_QRV_ParseNameInfo.AutoSize = true;
+            this.cb_QRV_ParseNameInfo.Checked = global::wtKST.Properties.Settings.Default.QRV_ParseNameInfo;
+            this.cb_QRV_ParseNameInfo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb_QRV_ParseNameInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_QRV_ParseNameInfo.Location = new System.Drawing.Point(9, 50);
+            this.cb_QRV_ParseNameInfo.Name = "cb_QRV_ParseNameInfo";
+            this.cb_QRV_ParseNameInfo.TabIndex = 27;
+            this.cb_QRV_ParseNameInfo.Text = "Parse name for QRV bands";
+            this.cb_QRV_ParseNameInfo.UseVisualStyleBackColor = true;
+            //
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.cb_KST_ShowBalloon);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(9, 215);
+            this.groupBox5.Location = new System.Drawing.Point(9, 235);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(445, 62);
             this.groupBox5.TabIndex = 25;
@@ -1160,7 +1175,7 @@ namespace wtKST
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(471, 290);
+            this.tabPage3.Size = new System.Drawing.Size(471, 310);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Calls";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1180,7 +1195,7 @@ namespace wtKST
             this.Bands.Controls.Add(this.checkBox70);
             this.Bands.Controls.Add(this.checkBox50);
             this.Bands.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bands.Location = new System.Drawing.Point(9, 87);
+            this.Bands.Location = new System.Drawing.Point(9, 107);
             this.Bands.Name = "Bands";
             this.Bands.Size = new System.Drawing.Size(445, 122);
             this.Bands.TabIndex = 8;
@@ -2110,6 +2125,7 @@ namespace wtKST
             cb_KST_ShowBalloon.Checked = Settings.Default.KST_ShowBalloon;
             tb_KST_MaxDist.Text = Settings.Default.KST_MaxDist;
             cb_ShowBeacons.Checked = Settings.Default.ShowBeacons;
+            cb_QRV_ParseNameInfo.Checked = Settings.Default.QRV_ParseNameInfo;
 
             // Log tab
             cb_WinTest_Active.Checked = Settings.Default.WinTest_Activate;
@@ -2194,6 +2210,7 @@ namespace wtKST
             Settings.Default.KST_ShowBalloon = cb_KST_ShowBalloon.Checked;
             Settings.Default.KST_MaxDist = tb_KST_MaxDist.Text;
             Settings.Default.ShowBeacons = cb_ShowBeacons.Checked;
+            Settings.Default.QRV_ParseNameInfo = cb_QRV_ParseNameInfo.Checked;
 
             // Log tab
             Settings.Default.WinTest_Activate = cb_WinTest_Active.Checked;
